@@ -49,6 +49,16 @@ import { AuthService } from '../../services/auth.service';
             <mat-icon>person_add</mat-icon>
             <span *ngIf="isExpanded">Assign Users</span>
           </a>
+          
+          <a mat-list-item routerLink="/settings/tenant" routerLinkActive="active" *ngIf="authService.hasRole('EntityAdmin')">
+            <mat-icon>settings</mat-icon>
+            <span *ngIf="isExpanded">Tenant Settings</span>
+          </a>
+          
+          <a mat-list-item routerLink="/settings/app" routerLinkActive="active" *ngIf="authService.hasRole('Admin')">
+            <mat-icon>admin_panel_settings</mat-icon>
+            <span *ngIf="isExpanded">App Settings</span>
+          </a>
         </mat-nav-list>
       </mat-sidenav>
       
