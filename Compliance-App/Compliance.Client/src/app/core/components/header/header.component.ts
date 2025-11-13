@@ -29,7 +29,7 @@ import { AuthService } from '../../services/auth.service';
       flex: 1 1 auto;
     }
     mat-toolbar {
-      background-color: #4caf50 !important;
+      background-color: #f44336 !important;
       color: #ffffff !important;
     }
   `]

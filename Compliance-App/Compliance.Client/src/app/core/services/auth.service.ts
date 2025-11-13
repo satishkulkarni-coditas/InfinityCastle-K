@@ -113,6 +113,15 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
+  getPrimaryRole(): string {
+    const user = this.currentUserSubject.value;
+    if (!user || !user.roles || user.roles.length === 0) {
+      return 'Unknown';
+    }
+    // Return the first role (usually the primary role)
+    return user.roles[0];
+  }
+
   hasRole(role: string): boolean {
     const user = this.currentUserSubject.value;
     if (!user) return false;

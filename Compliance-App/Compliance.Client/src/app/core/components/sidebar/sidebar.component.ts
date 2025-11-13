@@ -49,6 +49,16 @@ import { AuthService } from '../../services/auth.service';
             <mat-icon>person_add</mat-icon>
             <span *ngIf="isExpanded">Assign Users</span>
           </a>
+          
+          <a mat-list-item routerLink="/settings/tenant" routerLinkActive="active" *ngIf="authService.hasRole('GroupAdmin')">
+            <mat-icon>settings</mat-icon>
+            <span *ngIf="isExpanded">Tenant Settings</span>
+          </a>
+          
+          <a mat-list-item routerLink="/settings/app" routerLinkActive="active" *ngIf="authService.hasRole('AppAdmin')">
+            <mat-icon>admin_panel_settings</mat-icon>
+            <span *ngIf="isExpanded">App Settings</span>
+          </a>
         </mat-nav-list>
       </mat-sidenav>
       
@@ -99,8 +109,8 @@ import { AuthService } from '../../services/auth.service';
     }
     
     mat-nav-list a.active {
-      background-color: #e8f5e9;
-      color: #4caf50;
+      background-color: #ffebee;
+      color: #f44336;
       font-weight: 500;
     }
     
@@ -110,7 +120,7 @@ import { AuthService } from '../../services/auth.service';
     }
     
     mat-nav-list a.active mat-icon {
-      color: #4caf50;
+      color: #f44336;
     }
     
     .sidenav-collapsed mat-nav-list a span {

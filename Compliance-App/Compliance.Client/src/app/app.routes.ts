@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
+import { groupAdminGuard } from './core/guards/group-admin.guard';
+import { appAdminGuard } from './core/guards/app-admin.guard';
 
 export const routes: Routes = [
   {
@@ -35,6 +37,16 @@ export const routes: Routes = [
     path: 'users/assign',
     loadComponent: () => import('./features/users/user-assign/user-assign.component').then(m => m.UserAssignComponent),
     canActivate: [authGuard]
+  },
+  {
+    path: 'settings/tenant',
+    loadComponent: () => import('./features/settings/tenant-settings/tenant-settings.component').then(m => m.TenantSettingsComponent),
+    canActivate: [groupAdminGuard]
+  },
+  {
+    path: 'settings/app',
+    loadComponent: () => import('./features/settings/app-settings/app-settings.component').then(m => m.AppSettingsComponent),
+    canActivate: [appAdminGuard]
   }
 ];
 
