@@ -1,0 +1,33 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+*.log
+
+## Angular
+node_modules/
+dist/
+.angular/
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+## Database
+*.mdf
+*.ldf
+*.ndf
+
+## OS
+.DS_Store
+Thumbs.db
+

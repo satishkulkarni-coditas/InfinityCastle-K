@@ -1,0 +1,330 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Orange Theme - Custom CSS Variables for Angular Material 17 */
+:root {
+  /* Material Design 3 Theme Colors - Orange */
+  --mdc-theme-primary: #ff9800;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-primary-container: #ffe0b2;
+  --mdc-theme-on-primary-container: #e65100;
+  
+  --mdc-theme-secondary: #ff5722;
+  --mdc-theme-on-secondary: #ffffff;
+  --mdc-theme-secondary-container: #ffccbc;
+  --mdc-theme-on-secondary-container: #bf360c;
+  
+  --mdc-theme-tertiary: #ff6d00;
+  --mdc-theme-on-tertiary: #ffffff;
+  
+  --mdc-theme-error: #f44336;
+  --mdc-theme-on-error: #ffffff;
+  
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-on-surface: #212121;
+  --mdc-theme-surface-variant: #f5f5f5;
+  --mdc-theme-on-surface-variant: #616161;
+  
+  --mdc-theme-background: #fafafa;
+  --mdc-theme-on-background: #212121;
+  
+  --mdc-theme-outline: #757575;
+  --mdc-theme-outline-variant: #bdbdbd;
+  
+  /* Legacy Material Design 2 support */
+  --mat-primary-500: #ff9800;
+  --mat-primary-600: #fb8c00;
+  --mat-primary-700: #f57c00;
+  --mat-accent-500: #ff5722;
+  --mat-accent-600: #f4511e;
+  --mat-warn-500: #f44336;
+}
+
+/* Override Material Button Primary Color - More Specific */
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary,
+button.mat-mdc-raised-button.mat-primary,
+button.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #ff9800 !important;
+  --mdc-filled-button-label-text-color: #ffffff !important;
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+.mat-mdc-filled-button.mat-primary,
+button.mat-mdc-filled-button.mat-primary {
+  --mdc-filled-button-container-color: #ff9800 !important;
+  --mdc-filled-button-label-text-color: #ffffff !important;
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+.mat-mdc-outlined-button.mat-primary,
+button.mat-mdc-outlined-button.mat-primary {
+  --mdc-outlined-button-label-text-color: #ff9800 !important;
+  --mdc-outlined-button-outline-color: #ff9800 !important;
+  color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+
+.mat-mdc-text-button.mat-primary,
+button.mat-mdc-text-button.mat-primary {
+  --mdc-text-button-label-text-color: #ff9800 !important;
+  color: #ff9800 !important;
+}
+
+/* Override Material Button Accent Color */
+.mat-mdc-raised-button.mat-accent,
+.mat-mdc-unelevated-button.mat-accent {
+  --mdc-filled-button-container-color: #ff5722;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-filled-button.mat-accent {
+  --mdc-filled-button-container-color: #ff5722;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-outlined-button.mat-accent {
+  --mdc-outlined-button-label-text-color: #ff5722;
+  --mdc-outlined-button-outline-color: #ff5722;
+}
+
+.mat-mdc-text-button.mat-accent {
+  --mdc-text-button-label-text-color: #ff5722;
+}
+
+/* Override Material Form Field Focus Color */
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper {
+  --mdc-outlined-text-field-focus-outline-color: #ff9800;
+  --mdc-outlined-text-field-focus-label-text-color: #ff9800;
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-form-field-focus-overlay {
+  background-color: rgba(255, 152, 0, 0.04);
+}
+
+.mat-mdc-form-field .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control input:focus {
+  border-color: #ff9800;
+}
+
+/* Override Material Form Field - All states */
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-focus-outline-color: #ff9800;
+  --mdc-outlined-text-field-label-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-outlined-text-field-focus-label-text-color: #ff9800;
+}
+
+.mat-mdc-form-field .mat-mdc-text-field-wrapper {
+  --mdc-outlined-text-field-outline-color: rgba(0, 0, 0, 0.38);
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper {
+  --mdc-outlined-text-field-outline-color: #ff9800;
+  --mdc-outlined-text-field-focus-outline-color: #ff9800;
+}
+
+/* Override Material Input */
+.mat-mdc-input-element {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-input-element {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* Override Material Card */
+.mat-mdc-card {
+  --mdc-elevated-card-container-elevation: 2;
+  background-color: #ffffff;
+}
+
+/* Override Material Icon Button */
+.mat-mdc-icon-button.mat-primary {
+  --mdc-icon-button-icon-color: #ff9800;
+}
+
+.mat-mdc-icon-button.mat-accent {
+  --mdc-icon-button-icon-color: #ff5722;
+}
+
+.mat-mdc-icon-button.mat-warn {
+  --mdc-icon-button-icon-color: #f44336;
+}
+
+/* Override Material Snackbar */
+.mat-mdc-snack-bar-container {
+  --mdc-snackbar-container-color: #323232;
+  --mdc-snackbar-supporting-text-color: #ffffff;
+}
+
+/* Override Material Select/Dropdown */
+.mat-mdc-select:focus .mat-mdc-select-trigger {
+  border-color: #ff9800;
+}
+
+.mat-mdc-select-panel {
+  --mdc-menu-container-color: #ffffff;
+}
+
+/* Override Material Table */
+.mat-mdc-table {
+  background-color: #ffffff;
+}
+
+.mat-mdc-header-row {
+  background-color: #fff3e0;
+}
+
+.mat-mdc-row:hover {
+  background-color: #fff8e1;
+}
+
+/* Override Material Progress Bar */
+.mat-mdc-progress-bar .mdc-linear-progress__buffer {
+  background-color: rgba(255, 152, 0, 0.2);
+}
+
+.mat-mdc-progress-bar .mdc-linear-progress__bar-inner {
+  background-color: #ff9800;
+}
+
+/* Override Material Checkbox and Radio */
+.mat-mdc-checkbox.mat-primary .mdc-checkbox--checked .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+
+.mat-mdc-radio-button.mat-primary .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle {
+  border-color: #ff9800;
+}
+
+.mat-mdc-radio-button.mat-primary .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__inner-circle {
+  border-color: #ff9800;
+  background-color: #ff9800;
+}
+
+/* Override Material Toolbar */
+.mat-toolbar.mat-primary,
+mat-toolbar[color="primary"],
+.mat-mdc-toolbar.mat-primary,
+mat-toolbar.mat-primary {
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+.mat-toolbar.mat-primary .mat-button,
+.mat-toolbar.mat-primary .mat-icon-button,
+.mat-toolbar.mat-primary .mat-mdc-button,
+.mat-toolbar.mat-primary .mat-mdc-icon-button,
+mat-toolbar[color="primary"] .mat-button,
+mat-toolbar[color="primary"] .mat-icon-button,
+mat-toolbar[color="primary"] .mat-mdc-button,
+mat-toolbar[color="primary"] .mat-mdc-icon-button {
+  color: #ffffff !important;
+}
+
+/* MDC Toolbar specific overrides */
+.mat-mdc-toolbar {
+  --mdc-elevated-card-container-color: #ff9800;
+  background-color: #ff9800 !important;
+}
+
+.mat-mdc-toolbar.mat-primary {
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+/* Additional Global Orange Theme Overrides */
+.mat-mdc-button-base.mat-primary {
+  --mdc-filled-button-container-color: #ff9800 !important;
+  --mdc-filled-button-label-text-color: #ffffff !important;
+}
+
+/* Ripple effects */
+.mat-mdc-button.mat-primary .mat-ripple-element {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Ensure all primary buttons are orange - Very specific selectors */
+button[mat-raised-button][color="primary"],
+button[mat-unelevated-button][color="primary"],
+button[mat-filled-button][color="primary"],
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary,
+.mat-mdc-filled-button.mat-primary {
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+}
+
+button[mat-raised-button][color="primary"]:hover,
+button[mat-unelevated-button][color="primary"]:hover,
+button[mat-filled-button][color="primary"]:hover,
+.mat-mdc-raised-button.mat-primary:hover,
+.mat-mdc-unelevated-button.mat-primary:hover,
+.mat-mdc-filled-button.mat-primary:hover {
+  background-color: #fb8c00 !important;
+}
+
+/* Override Material button internal elements */
+.mat-mdc-raised-button.mat-primary .mdc-button__ripple,
+.mat-mdc-unelevated-button.mat-primary .mdc-button__ripple,
+.mat-mdc-filled-button.mat-primary .mdc-button__ripple {
+  background-color: #ff9800 !important;
+}
+
+.mat-mdc-raised-button.mat-primary .mdc-button__label,
+.mat-mdc-unelevated-button.mat-primary .mdc-button__label,
+.mat-mdc-filled-button.mat-primary .mdc-button__label {
+  color: #ffffff !important;
+}
+
+/* Form field label and underline */
+.mat-mdc-form-field .mat-mdc-floating-label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-floating-label {
+  color: #ff9800 !important;
+}
+
+/* Underline color for form fields */
+.mat-mdc-form-field .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__leading,
+.mat-mdc-form-field .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__notch,
+.mat-mdc-form-field .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__trailing {
+  border-color: rgba(0, 0, 0, 0.38);
+}
+
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__leading,
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__notch,
+.mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control .mdc-notched-outline__trailing {
+  border-color: #ff9800 !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
